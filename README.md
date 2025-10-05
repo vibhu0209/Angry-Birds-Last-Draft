@@ -1,5 +1,4 @@
-# Angry Birds - Last Draft (Most probably)
-
+# Angry Birds - Last Draft (I think)
 ## Overview
 
 This project is a browser-based physics puzzle game inspired by the popular Angry Birds franchise. Using HTML5, JavaScript, and web technologies, it recreates the slingshot mechanics and level-based destruction gameplay in a compact and extensible codebase.
@@ -38,7 +37,21 @@ For development, serve the folder via a local HTTP server to avoid cross-origin 
 
 ## Custom Loading Screen
 
-The project replaces the default loading screen with a custom HTML overlay showing loading progress percentage and brand/logo.
+The project replaces the default loading screen with a custom HTML overlay showing loading progress percentage and brand/logo. The custom loading screen visuals and code were enhanced with AI assistance to optimize user experience and responsiveness.
+
+---
+
+## Asset Attribution
+
+- Sprite and image assets are sourced from open-source libraries and repositories, used under their respective licenses and permissions.
+- All game assets, including sprites and backgrounds, have been curated and optimized for performance and style consistency.
+
+---
+
+## Acknowledgements
+
+- Special thanks to WhiteHat Jr for foundational guidance and sample code for implementing physics and gameplay mechanics.
+- Thanks to open-source communities providing free sprites and sound effects.
 
 ---
 
@@ -52,7 +65,6 @@ Contributions are welcome via GitHub pull requests or issues. Please ensure cons
 
 - Inspired by Rovio’s Angry Birds game mechanics.
 - Created using HTML5, JavaScript, and physics libraries.
-- All assets created or sourced with appropriate licenses.
 - Licensed under the MIT License.
 
 ---
