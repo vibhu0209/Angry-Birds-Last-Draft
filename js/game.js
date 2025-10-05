@@ -252,13 +252,12 @@ var GameLayer = cc.Layer.extend({
         });
         this.slingRubber3 = null;
 
-        // --------- Top Menu ! ---------
 
         var margin = 25,
             backMenu = new CMenu(this.getTexture("menu_back"));
         backMenu.setPosition(cc.p(margin, winSize.height - margin));
         backMenu.onClick(function () {
-            window.location.href = "https://code.org";
+            window.location.href = "https://github.com/vibhu0209";
         });
         this.addChild(backMenu);
         this.menus.push(backMenu);
@@ -416,4 +415,5 @@ var GameScene = cc.Scene.extend({
         this.addChild(layer);
     }
 });
+
 
