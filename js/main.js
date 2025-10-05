@@ -1,24 +1,42 @@
 var cocos2dApp = cc.Application.extend({
     config: document.querySelector('#cocos2d-html5')['c'],
     ctor: function (scene) {
+
         this._super();
+    
         this.startScene = scene;
+    
         cc.COCOS2D_DEBUG = this.config['COCOS2D_DEBUG'];
+    
         cc.setup(this.config['tag']);
-        cc.Loader.getInstance()
-            .onloading = function () {
-            cc.LoaderScene.getInstance()
-                .draw();
+        
+        var loader = cc.Loader.getInstance();
+    
+        // Remove default loader screen drawing
+        // loader.onloading = function () {
+        //     cc.LoaderScene.getInstance().draw();
+        // };
+    
+        document.getElementById('custom-loader').style.display = 'block';
+    
+        loader.onProgress = function (completedCount, totalCount, item) {
+        
+            var percentage = (completedCount / totalCount) * 100;
+            document.getElementById('custom-loader-text').innerHTML = `Loading... ${Math.floor(percentage)}%`;
         };
-        cc.Loader.getInstance()
-            .onload = function () {
+    
+        loader.onload = function () {
+            
+            document.getElementById('custom-loader').style.display = 'none';
+    
             cc.AppController.shareAppController()
                 .didFinishLaunchingWithOptions();
         };
-
-        cc.Loader.getInstance()
-            .preload(g_ressources);
+    
+        loader.preload(g_ressources);
+    
     },
+    
     applicationDidFinishLaunching: function () {
         var director = cc.Director.getInstance();
         director.setDisplayStats(this.config['showFPS']);
